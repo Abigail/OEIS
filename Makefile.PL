@@ -12,8 +12,8 @@ my  $PACKAGE      =  'OEIS';
 
 my  $LIB_FILE     =  "lib/$PACKAGE.pm";
     $LIB_FILE     =~  s!::!/!g;
-my  $LOCAL_ADDR   =  'cpan';
-my  $DOMAIN       =  'abigail.be';
+my  $LOCAL_ADDR   =  'cpan-oeis';
+my  $DOMAIN       =  'abigail.freedom.nl';
 my  $REPO         =   $PACKAGE;
     $REPO         =~  s!::!-!g;
 my  $REPO_HOST    =  'github.com';
@@ -28,8 +28,11 @@ my %args = (
     PREREQ_PM            => {
         'strict'             =>  0,
         'warnings'           =>  0,
+        'Exporter'           =>  0,
+        'experimental'       =>  0,
+        'LWP::Simple'        =>  0,
     },
-    MIN_PERL_VERSION     =>   5.010,
+    MIN_PERL_VERSION     =>   5.032,
     AUTHOR               =>  "$ME <$LOCAL_ADDR\@$DOMAIN>",
     LICENSE              =>  'mit',
     META_MERGE           => {
